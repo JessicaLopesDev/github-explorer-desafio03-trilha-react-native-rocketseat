@@ -20,14 +20,20 @@ export function CardAnimation({ children, ...rest }: CardAnimationProps) {
   const animatedStyle = useAnimatedStyle(() => {
     return {
       // TODO - setup animated style
+      opacity: cardOpacity.value,
+      position: cardOffset.value
     }
   })
 
   useEffect(() => {
     /**
      * TODO - setup cardOpacity.value and cardOffset.value with
-     * withTiming()
+      withTiming()
      */
+    // cardOpacity withTiming(cardOpacity.value, {
+    //     duration: 1,
+    //     easing: Easing.bezier(0.25, 0.1, 0.25, 1),
+    //   },
   }, []);
 
   return (
